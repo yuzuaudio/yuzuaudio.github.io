@@ -1,0 +1,39 @@
+---
+layout: default
+title: Products
+---
+
+<div id="kits">
+	
+    <div class="container section">
+        <h1 class="special-elite text-black text-center">Yuzu P2P Kits</h1>
+    </div>
+    <div class="container content">
+        <div class="row">
+            {% assign p2p_kits = site.kits | where: "type", "Yuzu P2P Kit" %}
+            {% for kit in p2p_kits %}
+            <div class="col">
+                <a href="{{ kit.url }}">
+                    <img src="/img/{{ kit.img }}" class="img-fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container section">
+        <h1 class="special-elite text-black text-center">Yuzu PCB Kits</h1>
+    </div>
+    <div class="container content">
+        <div class="row">
+            {% assign pcb_kits = site.kits | where: "type", "Yuzu PCB Kit" %}
+            {% for kit in pcb_kits %}
+            <div class="col">
+                <a href="{{ kit.url }}">
+                    <img src="/img/{{ kit.img }}" class="img-fluid img-thumbnail">
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
