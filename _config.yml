@@ -7,6 +7,10 @@ plugins:
   - jekyll-sitemap
 
 collections:
+  manufacturers:
+  parts:
+  specs:
+  boms:
   kits:
     output: true
 

@@ -2,15 +2,71 @@
 layout: default
 ---
 
-<div id="product">
+<div id="product" class="bg-white">
 	
-	<div class="container section">
-        <h1 class="special-elite text-black text-center">{{ page.name }}</h1>
+    <div class="container p-3">
+        <div class="row p-3">
+            <div class="col-6">
+                <img src="/img/{{ page.img }}" class="img-thumbnail d-block mx-auto" width="400">
+            </div>
+            <div class="col-6 my-4">
+                <h2 class="special-elite">{{ page.name }}</h2>
+                <h5 class="courier-new"><span class="badge badge-secondary p-2">{{ page.level }}</span></h5>
+                <br>
+                <div class="courier-new">{{ page.content }}</div>
+            </div>
+        </div>
     </div>
-    <div class="container content">
-        <div class="row">
-            <div class="col">
-                <img src="/img/{{ page.img }}" class="img-fluid img-thumbnail">
+    <div class="container p-3">
+        <div class="row p-3">
+            <div class="col-10 offset-1">
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link text-dark active" id="nav-specs-tab" data-toggle="tab" href="#nav-specs" role="tab" aria-controls="nav-specs" aria-selected="true"><span class="courier-new">Specifications</span></a>
+                        <a class="nav-item nav-link text-dark" id="nav-contents-tab" data-toggle="tab" href="#nav-contents" role="tab" aria-controls="nav-contents" aria-selected="false"><span class="courier-new">Box Contents</span></a>
+                        <a class="nav-item nav-link text-dark" id="nav-options-tab" data-toggle="tab" href="#nav-options" role="tab" aria-controls="nav-options" aria-selected="false"><span class="courier-new">Kit Options</span></a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-specs" role="tabpanel" aria-labelledby="nav-specs-tab">
+                        <div class="container p-3">
+                            <div class="row p-3">
+                                <div class="col">
+                                    <div class="courier-new">
+                                        {% assign spec = site.specs | where: "kit", page.kit | first %}
+                                        {{ spec.content }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-contents" role="tabpanel" aria-labelledby="nav-contents-tab">
+                        <div class="container p-3">
+                            <div class="row p-3">
+                                <div class="col">
+                                    <div class="courier-new">
+                                        {% assign bom = site.boms | where: "kit", page.kit | first %}
+                                        {{ bom.content }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-options" role="tabpanel" aria-labelledby="nav-options-tab">
+                        <div class="container p-3">
+                            {% assign parts = site.parts | where: "gear", page.kit | sort: "type" %}
+                            {% for part in parts %}
+                            <div class="row p-3">
+                                <div class="col">
+                                    <div class="courier-new">
+                                        {{ part.type }}: {{ part.manufacturer }} - {{ part.name }}
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

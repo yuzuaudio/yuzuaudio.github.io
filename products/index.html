@@ -3,37 +3,53 @@ layout: default
 title: Products
 ---
 
-<div id="kits">
+<div id="kits" class="bg-white">
 	
-    <div class="container section">
-        <h1 class="special-elite text-black text-center">Yuzu P2P Kits</h1>
+    <div class="container p-3">
+        <h1 class="special-elite pt-2 text-black text-center">Yuzu P2P Kits</h1>
     </div>
-    <div class="container content">
-        <div class="row">
-            {% assign p2p_kits = site.kits | where: "type", "Yuzu P2P Kit" %}
-            {% for kit in p2p_kits %}
-            <div class="col">
+    <div class="container p-3">
+        {% assign p2p_kits = site.kits | where: "type", "Yuzu P2P Kit" %}
+        {% for kit in p2p_kits %}
+        <div class="row p-3">
+            <div class="col-4">
                 <a href="{{ kit.url }}">
-                    <img src="/img/{{ kit.img }}" class="img-fluid img-thumbnail">
+                    <img src="/img/{{ kit.img }}" class="img-thumbnail d-block mx-auto" width="300">
                 </a>
             </div>
-            {% endfor %}
+            <div class="col-8 my-4">
+                <a href="{{ kit.url }}" class="text-dark">
+                    <h5 class="special-elite">{{ kit.name }}</h5>
+                </a>
+                <br>
+                <div class="courier-new">{{ kit.content }}</div>
+            </div>
         </div>
+        <br>
+        {% endfor %}
     </div>
-    <div class="container section">
-        <h1 class="special-elite text-black text-center">Yuzu PCB Kits</h1>
+    <div class="container p-3">
+        <h1 class="special-elite pt-2 text-black text-center">Yuzu PCB Kits</h1>
     </div>
-    <div class="container content">
-        <div class="row">
-            {% assign pcb_kits = site.kits | where: "type", "Yuzu PCB Kit" %}
-            {% for kit in pcb_kits %}
-            <div class="col">
+    <div class="container p-3">
+        {% assign pcb_kits = site.kits | where: "type", "Yuzu PCB Kit" %}
+        {% for kit in pcb_kits %}
+        <div class="row p-3">
+            <div class="col-4">
                 <a href="{{ kit.url }}">
-                    <img src="/img/{{ kit.img }}" class="img-fluid img-thumbnail">
+                    <img src="/img/{{ kit.img }}" class="img-thumbnail d-block mx-auto" width="300">
                 </a>
             </div>
-            {% endfor %}
+            <div class="col-8 my-4">
+                <a href="{{ kit.url }}" class="text-dark">
+                    <h5 class="special-elite">{{ kit.name }}</h5>
+                </a>
+                <br>
+                <div class="courier-new">{{ kit.content }}</div>
+            </div>
         </div>
+        <br>
+        {% endfor %}
     </div>
 
 </div>
