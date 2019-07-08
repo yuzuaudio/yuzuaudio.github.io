@@ -9,19 +9,24 @@
 	src: url(/webfonts/SpecialElite.ttf);
 }
 
+@font-face {
+	font-family: "Pomeranian";
+	src: url(/webfonts/Pomeranian.ttf);
+}
+
 .special-elite
 {
 	font-family: "Special Elite";
 }
 
+.pomeranian
+{
+	font-family: "Pomeranian";
+}
+
 .courier-new
 {
 	font-family: "Courier New", Courier, monospace;
-}
-
-body
-{
-	background-color: black;
 }
 
 /*****************************************************************************/

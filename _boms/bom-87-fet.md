@@ -2,12 +2,16 @@
 kit: U87
 ---
 
-- Resistors x 18
-- Capacitors x 17
-- Diode x 1
-- Inductors x 2
-- Transistor x 1
-- Transformer x 1
-- Potentiometer x 1
-- Switches x 3
-- PCBs x 3
+- 1 x Microphone Body
+- 1 x Shock Mount
+- 1 x Capsule
+- 1 x Transformer
+- 18 x Resistors
+- 17 x Capacitors
+- 1 x Diode
+- 2 x Inductors
+- 1 x Transistor
+- 1 x Potentiometer
+- 3 x Switches
+- 3 x PCBs
+- 1 x Build Guide
