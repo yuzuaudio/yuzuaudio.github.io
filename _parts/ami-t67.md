@@ -1,7 +1,9 @@
 ---
 name: T67
-manufacturer: AMI TAB Funkenwerk
+manufacturer: AMI
 type: Transformer
 role: Output
 gear: [U67]
 ---
+
+Similar to BV12, same ratio, PCB mounted.

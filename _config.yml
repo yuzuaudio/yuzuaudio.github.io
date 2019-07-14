@@ -8,6 +8,7 @@ plugins:
 
 collections:
   manufacturers:
+    output: true
   parts:
   specs:
   boms:

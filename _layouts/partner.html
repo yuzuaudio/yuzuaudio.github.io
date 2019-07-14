@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div id="partner">
+	
+    <div class="container p-3">
+        <div class="row p-3">
+            <div class="col-4 offset-1">
+                <img src="/img/{{ page.logo }}" class="d-block mx-auto" width="300">
+            </div>
+            <div class="col-6 my-3">
+                <h5 class="pomeranian">{{ page.name }}</h5>
+                <p>
+                    {% for type in page.type %}
+                    <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ type }}</span>
+                    {% endfor %}
+                    <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ page.country }}</span>
+                </p>
+                <div class="font-weight-light text-justify">{{ page.content }}</div>
+            </div>
+        </div>
+    </div>
+    <div class="container p-3">
+        <div class="row p-3">
+            <div class="col-10 offset-1">
+                <div class="row">
+                    {% assign parts = site.parts | where: "manufacturer", page.short | sort: "type" %}
+                    {% for part in parts %}
+                    <div class="col-4">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                <span class="font-weight-light">{{ part.type }}</span>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title pomeranian">{{ part.name }}</h6>
+                                <div class="card-text font-weight-light">{{ part.content }}</div>
+                            </div>
+                            <div class="card-footer">
+                                {% for gear in part.gear %}
+                                <span class="badge badge-dark p-2 font-weight-normal">{{ gear }}</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -4,13 +4,13 @@ title: Products
 ---
 
 <div id="kits">
-	
+
     <div class="container p-3">
-        <h1 class="pomeranian text-center mb-0">Yuzu P2P Kits</h1>
+        <h1 class="pomeranian text-center mb-0">Yuzu PCB Kits</h1>
     </div>
     <div class="container p-3">
-        {% assign p2p_kits = site.kits | where: "type", "Yuzu P2P Kit" %}
-        {% for kit in p2p_kits %}
+        {% assign pcb_kits = site.kits | where: "type", "PCB" | sort: "order" %}
+        {% for kit in pcb_kits %}
         <div class="row p-3">
             <div class="col-4 offset-1">
                 <a href="{{ kit.url }}">
@@ -29,11 +29,11 @@ title: Products
         {% endfor %}
     </div>
     <div class="container p-3">
-        <h1 class="pomeranian text-center mb-0">Yuzu PCB Kits</h1>
+        <h1 class="pomeranian text-center mb-0">Yuzu P2P Kits</h1>
     </div>
     <div class="container p-3">
-        {% assign pcb_kits = site.kits | where: "type", "Yuzu PCB Kit" %}
-        {% for kit in pcb_kits %}
+        {% assign p2p_kits = site.kits | where: "type", "P2P" | sort: "order" %}
+        {% for kit in p2p_kits %}
         <div class="row p-3">
             <div class="col-4 offset-1">
                 <a href="{{ kit.url }}">

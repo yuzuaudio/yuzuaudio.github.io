@@ -5,3 +5,5 @@ type: Transformer
 role: Output
 gear: [U87]
 ---
+
+Microphone Output Transformer U-87 style.

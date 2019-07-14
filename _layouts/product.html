@@ -11,7 +11,14 @@ layout: default
             </div>
             <div class="col-6 my-3">
                 <h5 class="pomeranian">{{ page.name }}</h5>
-                <p><span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ page.level }}</span></p>
+                <p>
+                    <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ page.level }}</span>
+                    <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ page.type }}</span>
+                    {% for tag in page.tags %}
+                    <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ tag }}</span>
+                    {% endfor %}
+                    <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ page.status }}</span>
+                </p>
                 <div class="font-weight-light text-justify">{{ page.content }}</div>
             </div>
         </div>
@@ -24,6 +31,7 @@ layout: default
                         <a class="nav-item nav-link text-dark active" id="nav-specs-tab" data-toggle="tab" href="#nav-specs" role="tab" aria-controls="nav-specs" aria-selected="true"><span class="font-weight-light">Specifications</span></a>
                         <a class="nav-item nav-link text-dark" id="nav-contents-tab" data-toggle="tab" href="#nav-contents" role="tab" aria-controls="nav-contents" aria-selected="false"><span class="font-weight-light">Box Contents</span></a>
                         <a class="nav-item nav-link text-dark" id="nav-options-tab" data-toggle="tab" href="#nav-options" role="tab" aria-controls="nav-options" aria-selected="false"><span class="font-weight-light">Kit Options</span></a>
+                        <a class="nav-item nav-link text-dark" id="nav-resources-tab" data-toggle="tab" href="#nav-resources" role="tab" aria-controls="nav-resources" aria-selected="false"><span class="font-weight-light">Resources</span></a>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
@@ -57,10 +65,34 @@ layout: default
                                 <div class="col">
                                     <div class="font-weight-light">
                                         <ul>
-                                            {% assign parts = site.parts | where: "gear", page.kit | sort: "type" %}
-                                            {% for part in parts %}
-                                            <li>{{ part.type }}: {{ part.manufacturer }} - {{ part.name }}</li>
+                                            {% assign options = site.parts | where: "gear", page.kit | sort: "type" %}
+                                            {% assign types = options | map: "type" | uniq %}
+                                            {% for type in types %}
+                                            <li>{{ type }}:</li>
+                                                <ul>
+                                                    {% assign parts = options | where: "type", type | sort: "role" %}
+                                                    {% for part in parts %}
+                                                    {% assign partner = site.manufacturers | where: "short", part.manufacturer | first %}
+                                                    <li>{{ part.role }}: <a href="{{ partner.url }}" class="text-dark">{{ part.manufacturer }}</a> - {{ part.name }}</li>
+                                                    {% endfor %}
+                                                </ul>
                                             {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="nav-resources" role="tabpanel" aria-labelledby="nav-resources-tab">
+                        <div class="container p-3">
+                            <div class="row p-3">
+                                <div class="col">
+                                    <div class="font-weight-light">
+                                        <ul>
+                                            {% assign links = site.data.links[page.kit] %}
+                                            <li>Build Guide: <a href="{{ links.guide }}" class="text-dark">Download PDF</a></li>
+                                            <li>Circuit Diagram: <a href="{{ links.schematics }}" class="text-dark">Download PDF</a></li>
+                                            <li>Bill of Materials: <a href="{{ links.bom }}" class="text-dark">Download PDF</a></li>
                                         </ul>
                                     </div>
                                 </div>

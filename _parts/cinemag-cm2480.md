@@ -1,7 +1,9 @@
 ---
 name: CM-2480
-manufacturer: Cinemag
+manufacturer: CineMag
 type: Transformer
 role: Output
 gear: [U87]
 ---
+
+Twin bobbin microphone output transformer. Compact size.
