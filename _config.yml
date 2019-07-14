@@ -1,7 +1,7 @@
 name: Yuzu Audio
 exclude: ["README.md", "Gemfile", "Gemfile.lock", "CNAME"]
 timezone: Europe/London
-url: http://www.yuzuaudio.com
+url: https://www.yuzuaudio.com
 
 plugins:
   - jekyll-sitemap
