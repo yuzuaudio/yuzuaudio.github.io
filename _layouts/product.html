@@ -19,7 +19,7 @@ layout: default
                     {% endfor %}
                     <span class="badge badge-pill badge-dark p-2 font-weight-normal">{{ page.status }}</span>
                 </p>
-                <div class="font-weight-light text-justify">{{ page.content }}</div>
+                <div class="font-weight-light text-justify">{{ page.content | markdownify }}</div>
             </div>
         </div>
     </div>
@@ -41,7 +41,7 @@ layout: default
                                 <div class="col">
                                     <div class="font-weight-light">
                                         {% assign spec = site.specs | where: "kit", page.kit | first %}
-                                        {{ spec.content }}
+                                        {{ spec.content | markdownify }}
                                     </div>
                                 </div>
                             </div>
@@ -53,7 +53,7 @@ layout: default
                                 <div class="col">
                                     <div class="font-weight-light">
                                         {% assign bom = site.boms | where: "kit", page.kit | first %}
-                                        {{ bom.content }}
+                                        {{ bom.content | markdownify }}
                                     </div>
                                 </div>
                             </div>

@@ -7,13 +7,15 @@ plugins:
   - jekyll-sitemap
 
 collections:
+  kits:
+    output: true
+    permalink: /:collection/:name/
   manufacturers:
     output: true
+    permalink: /:collection/:name/
   parts:
   specs:
   boms:
-  kits:
-    output: true
 
 defaults:
   -
