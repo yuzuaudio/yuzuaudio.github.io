@@ -23,7 +23,9 @@ title: Products
                     <h5 class="pomeranian">{{ kit.name }}</h5>
                 </a>
                 <br>
-                <div class="font-weight-light text-justify">{{ kit.content }}</div>
+                <div class="font-weight-light text-justify">{{ kit.content | markdownify }}</div>
+                <a class="btn btn-outline-dark" href="{{ kit.url }}" role="button">Learn More</a>
+                <a class="btn btn-outline-dark" href="/store" role="button">Shop Now</a>
             </div>
         </div>
         <br>
@@ -47,7 +49,9 @@ title: Products
                     <h5 class="pomeranian">{{ kit.name }}</h5>
                 </a>
                 <br>
-                <div class="font-weight-light text-justify">{{ kit.content }}</div>
+                <div class="font-weight-light text-justify">{{ kit.content | markdownify }}</div>
+                <a class="btn btn-outline-dark" href="{{ kit.url }}" role="button">Learn More</a>
+                <a class="btn btn-outline-dark" href="/store" role="button">Shop Now</a>
             </div>
         </div>
         <br>
