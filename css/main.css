@@ -14,6 +14,37 @@
 	font-family: "Pomeranian";
 }
 
+.text-swap-logo, .text-swap-content-logo,
+.text-swap, .text-swap-content
+{
+  	transition: 0.3s;
+}
+
+.text-swap-logo
+{
+	height: 38px;
+}
+
+.text-swap
+{
+	height: 24px;
+}
+
+.text-swap-content-logo, .text-swap-content
+{
+  	margin-top: 0px;
+}
+
+.text-swap-logo:hover .text-swap-content-logo
+{
+  	margin-top: -38px;
+}
+
+.text-swap:hover .text-swap-content
+{
+  	margin-top: -24px;
+}
+
 /*****************************************************************************/
 /*
 /* Home

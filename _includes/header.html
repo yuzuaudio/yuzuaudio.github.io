@@ -2,50 +2,63 @@
 	<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
 		<div class="container p-1">
 			<a class="navbar-brand" href="/">
-				<h2 class="pomeranian mb-0 d-none d-sm-block">Yuzu Audio</h2>
+				<h2 class="pomeranian mb-0 d-none d-sm-block">
+					<div class="text-swap-logo overflow-hidden text-center">
+						<span class="text-swap-content-logo d-block">Yuzu Audio</span>
+						<span class="d-block">ユズ・オーディオ</span>
+					</div>
+				</h2>
 				<h4 class="pomeranian mb-0 d-block d-sm-none">Yuzu Audio</h4>
 			</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 				<div class="navbar-nav pomeranian">
-					{% if page.title == "Products" %}
-					<a class="nav-item nav-link active" href="/products">
-						<h5 class="mx-3 mb-0">Products</h5>
+					<a class="nav-item nav-link{% if page.title == 'Products' %} active{% endif %}" href="/products">
+						<h5 class="mx-3 mb-0">
+							<div class="d-none d-sm-block">
+								<div class="text-swap overflow-hidden text-center">
+									<span class="text-swap-content d-block">Products</span>
+									<span class="d-block">プロダクツ</span>
+								</div>
+							</div>
+							<div class="d-block d-sm-none">Products</div>
+						</h5>
 					</a>
-					{% else %}
-					<a class="nav-item nav-link" href="/products">
-						<h5 class="mx-3 mb-0">Products</h5>
+					<a class="nav-item nav-link{% if page.title == 'Store' %} active{% endif %}" href="/store">
+						<h5 class="mx-3 mb-0">
+							<div class="d-none d-sm-block">
+								<div class="text-swap overflow-hidden text-center">
+									<span class="text-swap-content d-block">Store</span>
+									<span class="d-block">ストア</span>
+								</div>
+							</div>
+							<div class="d-block d-sm-none">Store</div>
+						</h5>
 					</a>
-					{% endif %}
-					{% if page.title == "Store" %}
-					<a class="nav-item nav-link active" href="/store">
-						<h5 class="mx-3 mb-0">Store</h5>
+					<a class="nav-item nav-link{% if page.title == 'About' %} active{% endif %}" href="/about">
+						<h5 class="mx-3 mb-0">
+							<div class="d-none d-sm-block">
+								<div class="text-swap overflow-hidden text-center">
+									<span class="text-swap-content d-block">About</span>
+									<span class="d-block">アバウト</span>
+								</div>
+							</div>
+							<div class="d-block d-sm-none">About</div>
+						</h5>
 					</a>
-					{% else %}
-					<a class="nav-item nav-link" href="/store">
-						<h5 class="mx-3 mb-0">Store</h5>
+					<a class="nav-item nav-link{% if page.title == 'Contact' %} active{% endif %}" href="/contact">
+						<h5 class="mx-3 mb-0">
+							<div class="d-none d-sm-block">
+								<div class="text-swap overflow-hidden text-center">
+									<span class="text-swap-content d-block">Contact</span>
+									<span class="d-block">コンタクト</span>
+								</div>
+							</div>
+							<div class="d-block d-sm-none">Contact</div>
+						</h5>
 					</a>
-					{% endif %}
-					{% if page.title == "About" %}
-					<a class="nav-item nav-link active" href="/about">
-						<h5 class="mx-3 mb-0">About</h5>
-					</a>
-					{% else %}
-					<a class="nav-item nav-link" href="/about">
-						<h5 class="mx-3 mb-0">About</h5>
-					</a>
-					{% endif %}
-					{% if page.title == "Contact" %}
-					<a class="nav-item nav-link active" href="/contact">
-						<h5 class="mx-3 mb-0">Contact</h5>
-					</a>
-					{% else %}
-					<a class="nav-item nav-link" href="/contact">
-						<h5 class="mx-3 mb-0">Contact</h5>
-					</a>
-					{% endif %}
 				</div>
 			</div>
 		</div>
