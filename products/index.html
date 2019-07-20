@@ -5,57 +5,63 @@ title: Products
 
 <div id="kits">
 
-    <div class="container p-3">
+    <div class="container-fluid p-3">
         <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Yuzu PCB Kits</h2>
         <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Yuzu PCB Kits</h4>
     </div>
-    <div class="container p-3">
-        {% assign pcb_kits = site.kits | where: "type", "PCB" | sort: "order" %}
-        {% for kit in pcb_kits %}
+    {% assign pcb_kits = site.kits | where: "type", "PCB" | sort: "order" %}
+    {% for kit in pcb_kits %}
+    <div class="container-fluid p-3{% cycle 'PCB': ' border-top border-bottom bg-light', '' %}">
         <div class="row p-3">
-            <div class="col-sm-4 offset-sm-1">
+            <div class="col-sm-3 offset-sm-2">
                 <a href="{{ kit.url }}">
                     <img src="/img/{{ kit.img }}" class="img-fluid d-block mx-auto">
                 </a>
             </div>
-            <div class="col-sm-6 my-3">
+            <div class="col-sm-5">
                 <a href="{{ kit.url }}" class="text-dark">
                     <h5 class="pomeranian">{{ kit.name }}</h5>
                 </a>
                 <br>
                 <div class="font-weight-light text-justify">{{ kit.content | markdownify }}</div>
-                <a class="btn btn-outline-dark" href="{{ kit.url }}" role="button">Learn More</a>
-                <a class="btn btn-outline-dark" href="/store" role="button">Shop Now</a>
+                <a class="btn btn-light border-dark rounded-pill" href="{{ kit.url }}" role="button">
+                    <span class="pomeranian"><small>Learn More</small></span>
+                </a>
+                <a class="btn btn-light border-dark rounded-pill" href="/store" role="button">
+                    <span class="pomeranian"><small>Shop Now</small></span>
+                </a>
             </div>
         </div>
-        <br>
-        {% endfor %}
     </div>
-    <div class="container p-3">
+    {% endfor %}
+    <div class="container-fluid p-3">
         <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Yuzu P2P Kits</h2>
         <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Yuzu P2P Kits</h4>
     </div>
-    <div class="container p-3">
-        {% assign p2p_kits = site.kits | where: "type", "P2P" | sort: "order" %}
-        {% for kit in p2p_kits %}
+    {% assign p2p_kits = site.kits | where: "type", "P2P" | sort: "order" %}
+    {% for kit in p2p_kits %}
+    <div class="container-fluid p-3{% cycle 'P2P': ' border-top border-bottom bg-light', '' %}">
         <div class="row p-3">
-            <div class="col-sm-4 offset-sm-1">
+            <div class="col-sm-3 offset-sm-2">
                 <a href="{{ kit.url }}">
                     <img src="/img/{{ kit.img }}" class="img-fluid d-block mx-auto">
                 </a>
             </div>
-            <div class="col-sm-6 my-3">
+            <div class="col-sm-5">
                 <a href="{{ kit.url }}" class="text-dark">
                     <h5 class="pomeranian">{{ kit.name }}</h5>
                 </a>
                 <br>
                 <div class="font-weight-light text-justify">{{ kit.content | markdownify }}</div>
-                <a class="btn btn-outline-dark" href="{{ kit.url }}" role="button">Learn More</a>
-                <a class="btn btn-outline-dark" href="/store" role="button">Shop Now</a>
+                <a class="btn btn-light border-dark rounded-pill" href="{{ kit.url }}" role="button">
+                    <span class="pomeranian"><small>Learn More</small></span>
+                </a>
+                <a class="btn btn-light border-dark rounded-pill" href="/store" role="button">
+                    <span class="pomeranian"><small>Shop Now</small></span>
+                </a>
             </div>
         </div>
-        <br>
-        {% endfor %}
     </div>
+    {% endfor %}
 
 </div>
