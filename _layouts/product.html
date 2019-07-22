@@ -7,10 +7,10 @@ layout: default
     <div class="container-fluid p-3">
         <div class="row p-3">
             <div class="col-sm-3 offset-sm-2">
-                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto">
+                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto mb-3">
             </div>
             <div class="col-sm-5">
-                <h5 class="pomeranian">{{ page.name }}</h5>
+                <h5 class="pomeranian mb-3">{{ page.name }}</h5>
                 <p class="mb-2">
                     <span class="badge badge-pill badge-dark p-2 mb-2 font-weight-normal">{{ page.level }}</span>
                     <span class="badge badge-pill badge-dark p-2 mb-2 font-weight-normal">{{ page.type }}</span>
@@ -44,11 +44,10 @@ layout: default
     <div class="container-fluid p-3 border-top border-bottom bg-light">
         <div class="row p-3">
             <div class="col-sm-3">
-                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto">
+                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto mb-3">
             </div>
             <div class="col-sm-5 offset-sm-2 order-sm-first">
-                <h5 class="pomeranian">Specifications</h5>
-                <br>
+                <h5 class="pomeranian mb-3">Specifications</h5>
                 <div class="font-weight-light">
                     {% assign spec = site.specs | where: "kit", page.kit | first %}
                     {{ spec.content | markdownify }}
@@ -59,11 +58,10 @@ layout: default
     <div class="container-fluid p-3">
         <div class="row p-3">
             <div class="col-sm-3 offset-sm-2">
-                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto">
+                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto mb-3">
             </div>
             <div class="col-sm-5">
-                <h5 class="pomeranian">Box Contents</h5>
-                <br>
+                <h5 class="pomeranian mb-3">Box Contents</h5>
                 <div class="font-weight-light">
                     {% assign bom = site.boms | where: "kit", page.kit | first %}
                     {{ bom.content | markdownify }}
@@ -74,17 +72,17 @@ layout: default
     <div class="container-fluid p-3 border-top border-bottom bg-light">
         <div class="row p-3">
             <div class="col-sm-3">
-                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto">
+                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto mb-3">
             </div>
             <div class="col-sm-5 offset-sm-2 order-sm-first">
-                <h5 class="pomeranian">Kit Options</h5>
-                <br>
+                <h5 class="pomeranian mb-3">Kit Options</h5>
                 <div class="font-weight-light">
-                    <ul>
+                    <dl>
                         {% assign options = site.parts | where: "gear", page.kit | sort: "type" %}
                         {% assign types = options | map: "type" | uniq %}
                         {% for type in types %}
-                        <li>{{ type }}:</li>
+                        <dt>{{ type }}:</dt>
+                        <dd>
                             <ul>
                                 {% assign parts = options | where: "type", type | sort: "role" %}
                                 {% for part in parts %}
@@ -92,8 +90,9 @@ layout: default
                                 <li>{{ part.role }}: <a href="{{ partner.url }}" class="text-dark">{{ part.manufacturer }}</a> - {{ part.name }}</li>
                                 {% endfor %}
                             </ul>
+                        </dd>
                         {% endfor %}
-                    </ul>
+                    </dl>
                 </div>
             </div>
         </div>
@@ -101,18 +100,32 @@ layout: default
     <div class="container-fluid p-3">
         <div class="row p-3">
             <div class="col-sm-3 offset-sm-2">
-                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto">
+                <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto mb-3">
             </div>
             <div class="col-sm-5">
-                <h5 class="pomeranian">Resources</h5>
-                <br>
+                <h5 class="pomeranian mb-3">Resources</h5>
                 <div class="font-weight-light">
-                    <ul>
+                    <dl>
                         {% assign links = site.data.links[page.kit] %}
-                        <li>Build Guide: <a href="{{ links.guide }}" class="text-dark">Download PDF</a></li>
-                        <li>Circuit Diagram: <a href="{{ links.schematics }}" class="text-dark">Download PDF</a></li>
-                        <li>Bill of Materials: <a href="{{ links.bom }}" class="text-dark">Download PDF</a></li>
-                    </ul>
+                        <dt>Build Guide:</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="{{ links.guide }}" class="text-dark">Download PDF</a></li>
+                            </ul>
+                        </dd>
+                        <dt>Circuit Diagram:</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="{{ links.schematics }}" class="text-dark">Download PDF</a></li>
+                            </ul>
+                        </dd>
+                        <dt>Bill of Materials:</dt>
+                        <dd>
+                            <ul>
+                                <li><a href="{{ links.bom }}" class="text-dark">Download PDF</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
                 </div>
             </div>
         </div>
