@@ -1,14 +1,39 @@
 <footer>
 	<div class="bg-light border-top">
-		<div class="container p-3">
+		<div class="container p-4">
 			<div class="row">
-				<div class="col-sm">
+				<div class="col-sm-4">
 					<h2 class="pomeranian mb-0">ユズ・オーディオ</h2>
 					<p class="lead mb-0">DIY audio electronics made easy.</p>
 					<p class="text-muted mb-0"><small>Copyright 2019 Yuzu Audio Limited</small></p>
+					<ul class="list-inline text-muted mb-2">
+						<li class="list-inline-item"><a href="/terms" class="text-dark"><small>Terms</small></a></li>
+						<li class="list-inline-item"><a href="/privacy" class="text-dark"><small>Privacy</small></a></li>
+						<li class="list-inline-item"><a href="/shipping" class="text-dark"><small>Shipping</small></a></li>
+					</ul>
 				</div>
-				<div class="col-sm align-self-center">
-					<div class="text-right p-3">
+				<div class="col-sm my-2">
+					<h6 class="pomeranian mb-3">Product Links</h6>
+					<ul class="list-unstyled font-weight-light mb-0">
+						{% assign kit = site.kits | where: "kit", "U87" | first %}
+						<li><a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a></li>
+						{% assign kit = site.kits | where: "kit", "U67" | first %}
+						<li><a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a></li>
+						{% assign kit = site.kits | where: "kit", "U47FET" | first %}
+						<li><a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a></li>
+					</ul>
+				</div>
+				<div class="col-sm my-2">
+					<h6 class="pomeranian mb-3">Support Links</h6>
+					<ul class="list-unstyled font-weight-light mb-0">
+						<li><a href="/support" class="text-dark">Build Support</a></li>
+						<li><a href="/resources" class="text-dark">DIY Resources</a></li>
+						<li><a href="/faq" class="text-dark">Product FAQ</a></li>
+					</ul>
+				</div>
+				<div class="col-sm my-2">
+					<h6 class="pomeranian mb-3">Social Links</h6>
+					<p class="py-2 mb-0">
 						<span class="fa-stack">
 							<a href="https://www.facebook.com/yuzuaudio" class="text-dark" target="_blank">
 								<i class="fas fa-square fa-stack-2x"></i>
@@ -33,7 +58,7 @@
 								<i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
 							</a>
 						</span>
-					</div>
+					</p>
 				</div>
 			</div>
 		</div>

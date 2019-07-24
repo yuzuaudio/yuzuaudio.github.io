@@ -9,6 +9,8 @@ level: Advanced
 options: [sowter]
 tags: [Compressor, Tube]
 status: Coming Soon
+price: TBD
+sale: TBD
 order: 4
 ---
 

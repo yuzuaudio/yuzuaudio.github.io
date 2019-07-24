@@ -17,6 +17,13 @@ title: Products
                 <a href="{{ kit.url }}">
                     <img src="/img/{{ kit.img }}" class="img-fluid d-block mx-auto mb-3">
                 </a>
+                <p class="pomeranian text-center">
+                    {% if kit.price == kit.sale %}
+                    <span>From £{{ kit.price }}</span>
+                    {% else %}
+                    <span>From <s>£{{ kit.price }}</s><br>Now £{{ kit.sale }}</span>
+                    {% endif %}
+                </p>
             </div>
             <div class="col-sm-5">
                 <a href="{{ kit.url }}" class="text-dark">
@@ -57,6 +64,13 @@ title: Products
                 <a href="{{ kit.url }}">
                     <img src="/img/{{ kit.img }}" class="img-fluid d-block mx-auto mb-3">
                 </a>
+                <p class="pomeranian text-center">
+                    {% if kit.price == kit.sale %}
+                    <span>From £{{ kit.price }}</span>
+                    {% else %}
+                    <span>From <s>£{{ kit.price }}</s><br>Now £{{ kit.sale }}</span>
+                    {% endif %}
+                </p>
             </div>
             <div class="col-sm-5">
                 <a href="{{ kit.url }}" class="text-dark">

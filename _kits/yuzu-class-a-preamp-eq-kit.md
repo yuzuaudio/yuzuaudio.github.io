@@ -9,6 +9,8 @@ level: Intermediate
 options: [sowter]
 tags: [Preamp, EQ]
 status: Coming Soon
+price: TBD
+sale: TBD
 order: 7
 ---
 

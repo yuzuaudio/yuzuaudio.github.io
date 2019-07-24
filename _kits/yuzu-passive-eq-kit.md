@@ -9,6 +9,8 @@ level: Advanced
 options: [sowter]
 tags: [EQ, Tube]
 status: Coming Soon
+price: TBD
+sale: TBD
 order: 5
 ---
 

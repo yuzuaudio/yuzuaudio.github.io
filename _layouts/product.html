@@ -8,6 +8,13 @@ layout: default
         <div class="row p-3">
             <div class="col-sm-3 offset-sm-2">
                 <img src="/img/{{ page.img }}" class="img-fluid d-block mx-auto mb-3">
+                <p class="pomeranian text-center">
+                    {% if page.price == page.sale %}
+                    <span>From £{{ page.price }}</span>
+                    {% else %}
+                    <span>From <s>£{{ page.price }}</s><br>Now £{{ page.sale }}</span>
+                    {% endif %}
+                </p>
             </div>
             <div class="col-sm-5">
                 <h5 class="pomeranian mb-3">{{ page.name }}</h5>

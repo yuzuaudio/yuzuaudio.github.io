@@ -27,7 +27,7 @@ layout: default
                 <div class="row">
                     {% assign parts = site.parts | where: "manufacturer", page.short | sort: "type" %}
                     {% for part in parts %}
-                    <div class="col-sm-4">
+                    <div class="col-sm-6">
                         <div class="card mb-3">
                             <div class="card-header">
                                 <span class="font-weight-light">{{ part.type }}</span>

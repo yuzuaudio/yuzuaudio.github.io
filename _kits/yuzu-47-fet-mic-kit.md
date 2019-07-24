@@ -9,6 +9,8 @@ level: Beginner
 options: [ami, cinemag, peluso, heiserman]
 tags: [Microphone, FET]
 status: Coming Soon
+price: TBD
+sale: TBD
 order: 3
 ---
 

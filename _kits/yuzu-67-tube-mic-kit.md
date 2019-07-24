@@ -9,6 +9,8 @@ level: Advanced
 options: [ami, cinemag, peluso, heiserman]
 tags: [Microphone, Tube]
 status: Coming Soon
+price: TBD
+sale: TBD
 order: 2
 ---
 
