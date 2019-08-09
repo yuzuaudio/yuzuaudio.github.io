@@ -9,5 +9,20 @@ title: Product FAQ
         <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Product FAQ</h2>
         <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Product FAQ</h4>
     </div>
+    <div class="container p-3">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+                {% capture faq %}{% include faq.md %}{% endcapture %}
+                {{ faq | markdownify }}
+            </div>
+        </div>
+    </div>
+    <div class="container p-3">
+        <div class="row">
+            <div class="col">
+                {% include mailchimp_form.html %}
+            </div>
+        </div>
+    </div>
 
 </div>
