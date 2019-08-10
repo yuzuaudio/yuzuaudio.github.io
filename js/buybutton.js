@@ -7788,7 +7788,7 @@ function logNotFound(component) {
   logger.warn(message);
 }
 
-var defaultMoneyFormat = '${{amount}}';
+var defaultMoneyFormat = '£{{amount}}';
 
 // Create a range object for efficently rendering strings to elements.
 var range;

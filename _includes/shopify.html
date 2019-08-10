@@ -1,13 +1,49 @@
 <script>
     var client = ShopifyBuy.buildClient({
-      domain: 'yuzuaudio.myshopify.com',
-      storefrontAccessToken: '9f75e59826fa722c32daba5dc0dc5342',
+      domain: 'yuzu-audio-test-store.myshopify.com',
+      storefrontAccessToken: '8bc9df65a6f9df23cc07ca3894ecbca4',
     });
 
     var ui = ShopifyBuy.UI.init(client);
 
+    ui.createComponent('cart', {
+      options: {
+        cart: {
+          popup: false,
+          text: {
+            button: 'Checkout'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
+          }
+        },
+        toggle: {
+          styles: {
+            toggle: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
+          }
+        }
+      }
+    });
+
+    {% if page.title == "Store" %}
     ui.createComponent('product', {
-      id: 3622416515152,
+      id: 3978945888335,
       node: document.getElementById('yuzu-1073'),
       options: {
         product: {
@@ -17,6 +53,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -28,17 +75,12 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
 
     ui.createComponent('product', {
-      id: 3622396559440,
+      id: 3978945724495,
       node: document.getElementById('yuzu-la2a'),
       options: {
         product: {
@@ -48,6 +90,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -59,17 +112,12 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
 
     ui.createComponent('product', {
-      id: 3622321619024,
+      id: 3978945527887,
       node: document.getElementById('yuzu-eqp'),
       options: {
         product: {
@@ -79,6 +127,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -90,17 +149,12 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
 
     ui.createComponent('product', {
-      id: 3622378864720,
+      id: 3978945626191,
       node: document.getElementById('yuzu-meq'),
       options: {
         product: {
@@ -110,6 +164,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -121,17 +186,12 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
 
     ui.createComponent('product', {
-      id: 3622419267664,
+      id: 3978945921103,
       node: document.getElementById('yuzu-u87'),
       options: {
         product: {
@@ -141,6 +201,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -152,17 +223,12 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
 
     ui.createComponent('product', {
-      id: 3622419693648,
+      id: 3978946052175,
       node: document.getElementById('yuzu-u67'),
       options: {
         product: {
@@ -172,6 +238,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -183,17 +260,12 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
 
     ui.createComponent('product', {
-      id: 3622420676688,
+      id: 3978946150479,
       node: document.getElementById('yuzu-u47fet'),
       options: {
         product: {
@@ -203,6 +275,17 @@
           },
           text: {
             button: 'Buy Now'
+          },
+          styles: {
+            button: {
+              'background-color': 'gray',
+              ':hover': {
+                'background-color': 'dimgray'
+              },
+              ':focus': {
+                'background-color': 'dimgray'
+              }
+            }
           }
         },
         modalProduct: {
@@ -214,12 +297,8 @@
           text: {
             button: 'Add to Cart'
           }
-        },
-        cart: {
-          text: {
-            button: 'Checkout'
-          }
         }
       }
     });
+    {% endif %}
 </script>

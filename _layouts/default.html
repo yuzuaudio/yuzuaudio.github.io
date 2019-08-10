@@ -26,6 +26,9 @@
         <!-- Font Awesome -->
         <link href="/css/all.min.css" rel="stylesheet">
 
+        <!-- Mailchimp -->
+        <link href="/css/mailchimp.css" rel="stylesheet">
+
         <!-- Main CSS -->
         <link href="/css/main.css" rel="stylesheet">
 
@@ -57,7 +60,7 @@
     <!-- Buy Button JS -->
     <script src="/js/buybutton.js"></script>
 
-    {% if page.title == "Store" %}
+    {% if page.title != "Home" %}
     {% include shopify.html %}
     {% endif %}
 
