@@ -8,9 +8,9 @@ kit: U87
 level: Beginner
 options: [ami, cinemag, peluso, heiserman]
 tags: [Microphone, FET]
-status: Coming Soon
-price: 699
-sale: 549
+status: New
+price: 700
+sale: 600
 order: 1
 ---
 

@@ -6,6 +6,62 @@ title: Products
 <div id="kits">
 
     <div class="container-fluid p-3">
+        <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Products</h2>
+        <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Products</h4>
+    </div>
+    {% assign kits = site.kits | where: "status", "New" | sort: "order" %}
+    {% for kit in kits %}
+    <div class="container-fluid p-3{% cycle ' border-top border-bottom bg-light', '' %}">
+        <div class="row p-3">
+            <div class="col-sm-3 offset-sm-2">
+                <a href="{{ kit.url }}">
+                    <img src="/img/{{ kit.img }}" class="img-fluid d-block mx-auto mb-3">
+                </a>
+                <p class="pomeranian text-center">
+                    {% if kit.price == kit.sale %}
+                    <span>From £{{ kit.price }}</span>
+                    {% else %}
+                    <span>From <s>£{{ kit.price }}</s><br>Now £{{ kit.sale }}</span>
+                    {% endif %}
+                </p>
+            </div>
+            <div class="col-sm-5">
+                <a href="{{ kit.url }}" class="text-dark">
+                    <h5 class="pomeranian mb-3">{{ kit.name }}</h5>
+                </a>
+                <div class="font-weight-light text-justify">{{ kit.content | markdownify }}</div>
+                <a class="btn btn-light border-dark btn-border rounded-0 mb-2" href="{{ kit.url }}" role="button">
+                    <div class="pomeranian d-none d-sm-block">
+                        <div class="text-swap overflow-hidden text-center">
+                            <span class="text-swap-content d-block">Learn More</span>
+                            <span class="d-block">商品について</span>
+                        </div>
+                    </div>
+                    <div class="pomeranian d-block d-sm-none">Learn More</div>
+                </a>
+                <a class="btn btn-light border-dark btn-border rounded-0 mb-2" href="/store" role="button">
+                    <div class="pomeranian d-none d-sm-block">
+                        <div class="text-swap overflow-hidden text-center">
+                            <span class="text-swap-content d-block">Buy Now</span>
+                            <span class="d-block">注文する</span>
+                        </div>
+                    </div>
+                    <div class="pomeranian d-block d-sm-none">Buy Now</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="container-fluid p-3{% cycle ' border-top border-bottom bg-light', '' %}">
+        <div class="row p-3">
+            <div class="col-sm-8 offset-sm-2">
+                <p class="pomeranian text-center mb-0">More Kits Coming Soon</p>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="container-fluid p-3">
         <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Yuzu PCB Kits</h2>
         <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Yuzu PCB Kits</h4>
     </div>
@@ -99,5 +155,6 @@ title: Products
         </div>
     </div>
     {% endfor %}
+    -->
 
 </div>

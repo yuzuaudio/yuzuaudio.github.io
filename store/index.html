@@ -6,6 +6,33 @@ title: Store
 <div id="store">
 
     <div class="container-fluid p-3">
+        <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Store</h2>
+        <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Store</h4>
+    </div>
+    {% assign kits = site.kits | where: "status", "New" | sort: "order" %}
+    {% for kit in kits %}
+    <div class="container-fluid p-3{% cycle ' border-top border-bottom bg-light', '' %}">
+        <div class="row p-3">
+            <div class="col-sm-8 offset-sm-2">
+                <div id="yuzu-{{ kit.kit | downcase }}" class="d-block mx-auto"></div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <div class="container-fluid p-3{% cycle ' border-top border-bottom bg-light', '' %}">
+        <div class="row p-3">
+            <div class="col-sm-8 offset-sm-2">
+                <p class="pomeranian text-center mb-0">More Kits Coming Soon</p>
+            </div>
+        </div>
+    </div>
+    {% assign kits = site.kits | where: "status", "Coming Soon" | sort: "order" %}
+    {% for kit in kits %}
+    <div id="yuzu-{{ kit.kit | downcase }}" class="d-none"></div>
+    {% endfor %}
+
+    <!--
+    <div class="container-fluid p-3">
         <h2 class="pomeranian text-center mb-0 d-none d-sm-block">Yuzu PCB Kits</h2>
         <h4 class="pomeranian text-center mb-0 d-block d-sm-none">Yuzu PCB Kits</h4>
     </div>
@@ -33,5 +60,6 @@ title: Store
         </div>
     </div>
     {% endfor %}
+    -->
 
 </div>
