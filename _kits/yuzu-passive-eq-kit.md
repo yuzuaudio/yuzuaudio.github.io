@@ -12,6 +12,7 @@ status: Coming Soon
 price: TBD
 sale: TBD
 order: 5
+shopify: 3697456611408
 ---
 
 The Yuzu Passive Equalizer kit is our faithful recreation of the classic American passive equalizer from the 1950s.

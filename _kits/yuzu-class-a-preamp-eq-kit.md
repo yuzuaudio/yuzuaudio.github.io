@@ -12,6 +12,7 @@ status: Coming Soon
 price: TBD
 sale: TBD
 order: 7
+shopify: 3697456513104
 ---
 
 The Yuzu Class A Preamp and Equalizer kit is our faithful recreation of the classic British Class A preamp from the 1970s.

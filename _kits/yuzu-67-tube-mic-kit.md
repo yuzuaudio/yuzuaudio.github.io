@@ -12,6 +12,7 @@ status: Coming Soon
 price: TBD
 sale: TBD
 order: 2
+shopify: 3697456349264
 ---
 
 The Yuzu 67 Tube Microphone Kit is our faithful recreation of the classic German large-diaphragm condenser microphone from the early 1960s.

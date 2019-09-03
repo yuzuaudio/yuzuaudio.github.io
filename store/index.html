@@ -26,10 +26,6 @@ title: Store
             </div>
         </div>
     </div>
-    {% assign kits = site.kits | where: "status", "Coming Soon" | sort: "order" %}
-    {% for kit in kits %}
-    <div id="yuzu-{{ kit.kit | downcase }}" class="d-none"></div>
-    {% endfor %}
 
     <!--
     <div class="container-fluid p-3">

@@ -12,6 +12,7 @@ status: Coming Soon
 price: TBD
 sale: TBD
 order: 6
+shopify: 3697456578640
 ---
 
 The Yuzu Mid Range Equalizer kit is our faithful recreation of the classic American passive equalizer from the 1950s.

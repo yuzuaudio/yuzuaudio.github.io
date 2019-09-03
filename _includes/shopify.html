@@ -83,9 +83,11 @@
     });
 
     {% if page.title == "Store" %}
+    {% assign kits = site.kits | where: "status", "New" | sort: "order" %}
+    {% for kit in kits %}
     ui.createComponent('product', {
-      id: 3697456513104,
-      node: document.getElementById('yuzu-1073'),
+      id: '{{ kit.shopify }}',
+      node: document.getElementById('yuzu-{{ kit.kit | downcase }}'),
       options: {
         product: {
           layout: 'horizontal',
@@ -93,7 +95,8 @@
             variantTitle: true
           },
           text: {
-            button: 'Add To Cart'
+            button: 'Add To Cart',
+            outOfStock: 'Out Of Stock'
           },
           styles: {
             button: {
@@ -114,232 +117,14 @@
             },
             price: {
               'font-family': 'Pomeranian'
-            }
-          }
-        }
-      }
-    });
-
-    ui.createComponent('product', {
-      id: 3697456545872,
-      node: document.getElementById('yuzu-la2a'),
-      options: {
-        product: {
-          layout: 'horizontal',
-          contents: {
-            variantTitle: true
-          },
-          text: {
-            button: 'Add To Cart'
-          },
-          styles: {
-            button: {
-              'font-family': 'Pomeranian',
-              'background-color': 'white',
-              ':hover': {
-                'background-color': 'lightgray'
-              },
-              ':focus': {
-                'background-color': 'lightgray'
-              },
-              'color': 'black',
-              'border': '3px solid',
-              'border-radius': '0'
             },
-            title: {
-              'font-family': 'Pomeranian'
-            },
-            price: {
+            compareAt: {
               'font-family': 'Pomeranian'
             }
           }
         }
       }
     });
-
-    ui.createComponent('product', {
-      id: 3697456611408,
-      node: document.getElementById('yuzu-eqp'),
-      options: {
-        product: {
-          layout: 'horizontal',
-          contents: {
-            variantTitle: true
-          },
-          text: {
-            button: 'Add To Cart'
-          },
-          styles: {
-            button: {
-              'font-family': 'Pomeranian',
-              'background-color': 'white',
-              ':hover': {
-                'background-color': 'lightgray'
-              },
-              ':focus': {
-                'background-color': 'lightgray'
-              },
-              'color': 'black',
-              'border': '3px solid',
-              'border-radius': '0'
-            },
-            title: {
-              'font-family': 'Pomeranian'
-            },
-            price: {
-              'font-family': 'Pomeranian'
-            }
-          }
-        }
-      }
-    });
-
-    ui.createComponent('product', {
-      id: 3697456578640,
-      node: document.getElementById('yuzu-meq'),
-      options: {
-        product: {
-          layout: 'horizontal',
-          contents: {
-            variantTitle: true
-          },
-          text: {
-            button: 'Add To Cart'
-          },
-          styles: {
-            button: {
-              'font-family': 'Pomeranian',
-              'background-color': 'white',
-              ':hover': {
-                'background-color': 'lightgray'
-              },
-              ':focus': {
-                'background-color': 'lightgray'
-              },
-              'color': 'black',
-              'border': '3px solid',
-              'border-radius': '0'
-            },
-            title: {
-              'font-family': 'Pomeranian'
-            },
-            price: {
-              'font-family': 'Pomeranian'
-            }
-          }
-        }
-      }
-    });
-
-    ui.createComponent('product', {
-      id: 3697456447568,
-      node: document.getElementById('yuzu-u87'),
-      options: {
-        product: {
-          layout: 'horizontal',
-          contents: {
-            variantTitle: true
-          },
-          text: {
-            button: 'Add To Cart'
-          },
-          styles: {
-            button: {
-              'font-family': 'Pomeranian',
-              'background-color': 'white',
-              ':hover': {
-                'background-color': 'lightgray'
-              },
-              ':focus': {
-                'background-color': 'lightgray'
-              },
-              'color': 'black',
-              'border': '3px solid',
-              'border-radius': '0'
-            },
-            title: {
-              'font-family': 'Pomeranian'
-            },
-            price: {
-              'font-family': 'Pomeranian'
-            }
-          }
-        }
-      }
-    });
-
-    ui.createComponent('product', {
-      id: 3697456349264,
-      node: document.getElementById('yuzu-u67'),
-      options: {
-        product: {
-          layout: 'horizontal',
-          contents: {
-            variantTitle: true
-          },
-          text: {
-            button: 'Add To Cart'
-          },
-          styles: {
-            button: {
-              'font-family': 'Pomeranian',
-              'background-color': 'white',
-              ':hover': {
-                'background-color': 'lightgray'
-              },
-              ':focus': {
-                'background-color': 'lightgray'
-              },
-              'color': 'black',
-              'border': '3px solid',
-              'border-radius': '0'
-            },
-            title: {
-              'font-family': 'Pomeranian'
-            },
-            price: {
-              'font-family': 'Pomeranian'
-            }
-          }
-        }
-      }
-    });
-
-    ui.createComponent('product', {
-      id: 3697456185424,
-      node: document.getElementById('yuzu-u47fet'),
-      options: {
-        product: {
-          layout: 'horizontal',
-          contents: {
-            variantTitle: true
-          },
-          text: {
-            button: 'Add To Cart'
-          },
-          styles: {
-            button: {
-              'font-family': 'Pomeranian',
-              'background-color': 'white',
-              ':hover': {
-                'background-color': 'lightgray'
-              },
-              ':focus': {
-                'background-color': 'lightgray'
-              },
-              'color': 'black',
-              'border': '3px solid',
-              'border-radius': '0'
-            },
-            title: {
-              'font-family': 'Pomeranian'
-            },
-            price: {
-              'font-family': 'Pomeranian'
-            }
-          }
-        }
-      }
-    });
+    {% endfor %}
     {% endif %}
 </script>

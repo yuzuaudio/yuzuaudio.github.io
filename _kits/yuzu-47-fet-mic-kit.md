@@ -12,6 +12,7 @@ status: Coming Soon
 price: TBD
 sale: TBD
 order: 3
+shopify: 3697456185424
 ---
 
 The Yuzu 47 FET Microphone Kit is our faithful recreation of the classic German large-diaphragm condenser microphone from the 1970s.

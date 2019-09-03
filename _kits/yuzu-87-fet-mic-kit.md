@@ -12,6 +12,7 @@ status: New
 price: 700
 sale: 600
 order: 1
+shopify: 3697456447568
 ---
 
 The Yuzu 87 FET Microphone Kit is our faithful recreation of the classic German large-diaphragm condenser microphone from the late 1960s.
