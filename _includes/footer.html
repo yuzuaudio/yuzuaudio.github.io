@@ -15,12 +15,16 @@
 				<div class="col-sm my-2">
 					<h6 class="pomeranian mb-3">Product Links</h6>
 					<ul class="list-unstyled font-weight-light mb-0">
-						{% assign kit = site.kits | where: "kit", "U87" | first %}
-						<li><a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a></li>
-						{% assign kit = site.kits | where: "kit", "U67" | first %}
-						<li><a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a></li>
-						{% assign kit = site.kits | where: "kit", "U47FET" | first %}
-						<li><a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a></li>
+						{% assign kits = site.kits | sort: "order" %}
+						{% for kit in kits limit:3 %}
+						<li>
+							{% if kit.status == 'New' %}
+							<a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a>
+							{% else %}
+							{{ kit.name }}
+							{% endif %}
+						</li>
+						{% endfor %}
 					</ul>
 				</div>
 				<div class="col-sm my-2">

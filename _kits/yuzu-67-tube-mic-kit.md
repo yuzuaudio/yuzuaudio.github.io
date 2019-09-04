@@ -11,6 +11,7 @@ tags: [Microphone, Tube]
 status: Coming Soon
 price: TBD
 sale: TBD
+assembly: TBD
 order: 2
 shopify: 3697456349264
 ---

@@ -94,11 +94,24 @@ layout: default
                                 {% assign parts = options | where: "type", type | sort: "role" %}
                                 {% for part in parts %}
                                 {% assign partner = site.manufacturers | where: "short", part.manufacturer | first %}
-                                <li>{{ part.role }}: <a href="{{ partner.url }}" class="text-dark">{{ part.manufacturer }}</a> - {{ part.name }}</li>
+                                <li>
+                                    {% if part.status == 'Available' %}
+                                    <a href="{{ partner.url }}" class="text-dark">{{ part.manufacturer }} - {{ part.name }}</a>
+                                    {% else %}
+                                    {{ part.manufacturer }} - {{ part.name }} (Coming Soon)
+                                    {% endif %}
+                                </li>
                                 {% endfor %}
                             </ul>
                         </dd>
                         {% endfor %}
+                        <dt>Assembly:</dt>
+                        <dd>
+                            <ul>
+                                <li>DIY Kit</li>
+                                <li>Pre-Built (+£{{ page.assembly }})</li>
+                            </ul>
+                        </dd>
                     </dl>
                 </div>
             </div>
@@ -117,19 +130,37 @@ layout: default
                         <dt>Build Guide:</dt>
                         <dd>
                             <ul>
-                                <li><a href="{{ links.guide }}" class="text-dark">Download PDF</a></li>
+                                <li>
+                                    {% if links.guide != '#' %}
+                                    <a href="{{ site.s3url }}/guides/{{ links.guide }}" target="_blank" class="text-dark">Download PDF</a>
+                                    {% else %}
+                                    Download PDF (Coming Soon)
+                                    {% endif %}
+                                </li>
                             </ul>
                         </dd>
                         <dt>Circuit Diagram:</dt>
                         <dd>
                             <ul>
-                                <li><a href="{{ links.schematics }}" class="text-dark">Download PDF</a></li>
+                                <li>
+                                    {% if links.schematics != '#' %}
+                                    <a href="{{ site.s3url }}/schematics/{{ links.schematics }}" target="_blank" class="text-dark">Download PDF</a>
+                                    {% else %}
+                                    Download PDF (Coming Soon)
+                                    {% endif %}
+                                </li>
                             </ul>
                         </dd>
                         <dt>Bill of Materials:</dt>
                         <dd>
                             <ul>
-                                <li><a href="{{ links.bom }}" class="text-dark">Download PDF</a></li>
+                                <li>
+                                    {% if links.bom != '#' %}
+                                    <a href="{{ site.s3url }}/boms/{{ links.bom }}" target="_blank" class="text-dark">Download PDF</a>
+                                    {% else %}
+                                    Download PDF (Coming Soon)
+                                    {% endif %}
+                                </li>
                             </ul>
                         </dd>
                     </dl>

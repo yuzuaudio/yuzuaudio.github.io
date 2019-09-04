@@ -11,6 +11,7 @@ tags: [EQ, Tube]
 status: Coming Soon
 price: TBD
 sale: TBD
+assembly: TBD
 order: 6
 shopify: 3697456578640
 ---

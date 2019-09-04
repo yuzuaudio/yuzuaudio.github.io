@@ -11,6 +11,7 @@ tags: [Compressor, Tube]
 status: Coming Soon
 price: TBD
 sale: TBD
+assembly: TBD
 order: 4
 shopify: 3697456545872
 ---

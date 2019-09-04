@@ -11,6 +11,7 @@ tags: [Preamp, EQ]
 status: Coming Soon
 price: TBD
 sale: TBD
+assembly: TBD
 order: 7
 shopify: 3697456513104
 ---

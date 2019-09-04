@@ -11,6 +11,7 @@ tags: [Microphone, FET]
 status: Coming Soon
 price: TBD
 sale: TBD
+assembly: TBD
 order: 3
 shopify: 3697456185424
 ---

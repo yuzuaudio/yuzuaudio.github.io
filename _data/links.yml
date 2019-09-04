@@ -30,5 +30,5 @@ U67:
 
 U87:
   guide: '#'
-  schematics: '#'
-  bom: '#'
+  schematics: 'U87+Circuit+Diagram.png'
+  bom: 'U87+Bill+of+Materials.png'

@@ -4,6 +4,7 @@ manufacturer: Peluso
 type: Capsule
 role: Dual
 gear: [U47FET]
+status: Unavailable
 ---
 
 Microphone Capsule.

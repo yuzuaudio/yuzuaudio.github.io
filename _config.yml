@@ -3,6 +3,8 @@ exclude: ["README.md", "Gemfile", "Gemfile.lock", "CNAME"]
 timezone: Europe/London
 url: https://www.yuzuaudio.com
 
+s3url: https://yuzuaudio.s3.amazonaws.com
+
 plugins:
   - jekyll-sitemap
 
