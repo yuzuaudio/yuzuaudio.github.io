@@ -1,0 +1,3 @@
+Yuzu Audio was started in 2019 from a small apartment in East London. With a strong desire to spread awareness of the DIY audio community, our focus is to provide an entry point for beginners and newcomers to learn how to build classic analog audio equipment without the need to scavenge for parts or spend endless hours of research.
+
+We offer complete DIY kits for the audio electronics enthusiast with everything at your fingertips to start assembling in no time. With a soldering iron and some basic tools, you can get your hands on that classic microphone or outboard gear with the added reward of accomplishing the task yourself.

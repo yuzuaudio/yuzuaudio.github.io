@@ -11,9 +11,11 @@ title: DIY Resources
     </div>
     <div class="container p-3">
         <div class="row">
-            <div class="col-sm-8 offset-sm-2">
-                {% capture resources %}{% include resources.md %}{% endcapture %}
-                {{ resources | markdownify }}
+            <div class="col-sm-6 offset-sm-3">
+                <div class="font-weight-light text-justify">
+                    {% capture resources %}{% include resources.md %}{% endcapture %}
+                    {{ resources | markdownify }}
+                </div>
             </div>
         </div>
     </div>
