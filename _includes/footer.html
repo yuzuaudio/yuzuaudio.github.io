@@ -21,7 +21,10 @@
 							{% if kit.status == 'New' %}
 							<a href="{{ kit.url }}" class="text-dark">{{ kit.name }}</a>
 							{% else %}
-							{{ kit.name }}
+							<div class="text-swap overflow-hidden">
+								<span class="text-swap-content d-block">{{ kit.name }}</span>
+								<span class="d-block">Coming Soon</span>
+							</div>
 							{% endif %}
 						</li>
 						{% endfor %}
