@@ -9,8 +9,8 @@ level: Beginner
 options: [ami, cinemag, peluso, heiserman]
 tags: [Microphone, FET]
 status: New
-price: 700
-sale: 600
+price: 800
+sale: 700
 assembly: 100
 order: 1
 shopify: 3697456447568
