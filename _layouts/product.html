@@ -130,12 +130,12 @@ layout: default
                                 </li>
                             </ul>
                         </dd>
-                        <dt>Circuit Diagram:</dt>
+                        <dt>Circuit Layout:</dt>
                         <dd>
                             <ul>
                                 <li>
-                                    {% if links.schematics != '#' %}
-                                    <a href="{{ site.s3url }}/schematics/{{ links.schematics }}" target="_blank" class="text-dark">Download PDF</a>
+                                    {% if links.layout != '#' %}
+                                    <a href="{{ site.s3url }}/layouts/{{ links.layout }}" target="_blank" class="text-dark">Download PDF</a>
                                     {% else %}
                                     Download PDF (Coming Soon)
                                     {% endif %}
@@ -148,6 +148,18 @@ layout: default
                                 <li>
                                     {% if links.bom != '#' %}
                                     <a href="{{ site.s3url }}/boms/{{ links.bom }}" target="_blank" class="text-dark">Download PDF</a>
+                                    {% else %}
+                                    Download PDF (Coming Soon)
+                                    {% endif %}
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt>Schematic Diagram:</dt>
+                        <dd>
+                            <ul>
+                                <li>
+                                    {% if links.diagram != '#' %}
+                                    <a href="{{ site.s3url }}/diagrams/{{ links.diagram }}" target="_blank" class="text-dark">Download PDF</a>
                                     {% else %}
                                     Download PDF (Coming Soon)
                                     {% endif %}

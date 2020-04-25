@@ -1,34 +1,41 @@
 1073:
   guide: '#'
-  schematics: '#'
+  layout: '#'
   bom: '#'
+  diagram: '#'
 
 LA2A:
   guide: '#'
-  schematics: '#'
+  layout: '#'
   bom: '#'
+  diagram: '#'
 
 EQP:
   guide: '#'
-  schematics: '#'
+  layout: '#'
   bom: '#'
+  diagram: '#'
 
 MEQ:
   guide: '#'
-  schematics: '#'
+  layout: '#'
   bom: '#'
+  diagram: '#'
 
 U47FET:
   guide: '#'
-  schematics: '#'
+  layout: '#'
   bom: '#'
+  diagram: '#'
 
 U67:
   guide: '#'
-  schematics: '#'
+  layout: '#'
   bom: '#'
+  diagram: '#'
 
 U87:
   guide: '#'
-  schematics: 'U87+Circuit+Diagram.png'
-  bom: 'U87+Bill+of+Materials.png'
+  layout: '#'
+  bom: '#'
+  diagram: '#'
