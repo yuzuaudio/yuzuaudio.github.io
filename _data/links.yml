@@ -35,7 +35,7 @@ U67:
   diagram: '#'
 
 U87:
-  guide: '#'
-  layout: '#'
-  bom: '#'
+  guide: 'Yuzu+87+FET+Build+Guide.pdf'
+  layout: 'Yuzu+87+FET+Circuit+Layout.pdf'
+  bom: 'Yuzu+87+FET+Bill+of+Materials.pdf'
   diagram: '#'
