@@ -4,6 +4,7 @@ title: Yuzu 87 FET Mic Kit
 name: Yuzu 87 FET Mic Kit
 type: PCB
 img: U87.png
+imgs: [U87_1.jpg, U87_2.jpg, U87_3.jpg, U87_4.jpg]
 kit: U87
 level: Beginner
 options: [ami, cinemag, peluso, heiserman]
